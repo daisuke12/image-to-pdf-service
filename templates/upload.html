@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>画像をPDFに変換</title>
+</head>
+<body>
+  <h1>画像をPDFに変換する</h1>
+  <form action="/convert" method="post" enctype="multipart/form-data">
+    <input type="file" name="image" accept="image/*" required><br><br>
+    <input type="submit" value="変換">
+  </form>
+</body>
+</html>
