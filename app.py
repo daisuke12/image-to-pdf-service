@@ -2,11 +2,8 @@ from flask import Flask, request, send_file, render_template
 from reportlab.pdfgen import canvas
 from reportlab.lib.utils import ImageReader
 from PIL import Image
+import io
 import os
-
-if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
 
 app = Flask(__name__)
 
@@ -38,5 +35,5 @@ def convert_file():
     return send_file(pdf_buffer, as_attachment=True, download_name='converted.pdf')
 
 if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port, debug=False)
-
